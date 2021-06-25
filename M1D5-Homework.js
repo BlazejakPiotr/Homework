@@ -50,6 +50,7 @@ It should add the word "Strive" in front of the given string, but if the given s
 
     // Logging string "Piotr"
     // console.log(strivify("Piotr"))
+    
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
@@ -62,7 +63,12 @@ HINT: Module Operator
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR CODE HERE */
+    function reverseString(str){
+        return str.split("").reverse().join("")
+    }
+    // Logging reversed string
+    // console.log(reverseString("reverse test"))
+
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
