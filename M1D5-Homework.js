@@ -45,12 +45,23 @@ It should return triple their absolute difference if the given number is greater
     // Logging greater number than 19
     // console.log(crazyDiff(21))
 
-    
+
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
 
-/* WRITE YOUR CODE HERE */
+    function boundary(n){
+       return (n >= 20 && n <= 100 || n === 400) ? true : false
+    }
+    // Logging n outside of 20 - 100 range
+    // console.log(boundary(1))
+
+    // Logging n inside of 20 - 100 range
+    // console.log(boundary(20))
+
+    // Logging n equal to 400
+    // console.log(boundary(400))
+
 
 /* EXERCISE 5
 Write a function "strivify" which accepts a string.
