@@ -83,7 +83,31 @@ Write a function "check3and7" which accepts a positive number and check if it is
 HINT: Module Operator
 */
 
-/* WRITE YOUR CODE HERE */
+    function check3and7(num){
+        if (num > 0){
+            if (num % 3 === 0){
+                return console.log(`number ${num} can be DIVIDED by 3`)
+            }
+            else if (num % 7 === 0){
+                return console.log(`number ${num} can be DIVIDED by 7`)
+            }
+            else {
+                return console.log(`number ${num} can't be DIVIDED by 3 or either 7`)
+            }
+        }
+        else {
+            return console.log(`number ${num} isn't positive!`)
+        }
+    }
+    // Logging multiple conditions
+    // but i'm not sure that i understood the task
+    // and i'm getting undefined value
+    /*  console.log(check3and7(3))
+        console.log(check3and7(7))
+        console.log(check3and7(2))
+        console.log(check3and7(-1)) */
+        console.log(check3and7(5))
+
 
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
