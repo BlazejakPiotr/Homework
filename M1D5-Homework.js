@@ -100,7 +100,15 @@ Write a function "cutString" to create a new string without the first and last c
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR CODE HERE */
+    function giveMeRandom(n){
+        const numsArr = []
+        for (let i = 0; i < n; i++){
+            numsArr.push(Math.floor(Math.random() * 10))
+        }
+        return numsArr
+    }
+    // Logging array with random numbers
+    // console.log(giveMeRandom(4))
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
