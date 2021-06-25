@@ -106,7 +106,6 @@ HINT: Module Operator
         console.log(check3and7(7))
         console.log(check3and7(2))
         console.log(check3and7(-1)) */
-        console.log(check3and7(5))
 
 
 /* EXERCISE 7
