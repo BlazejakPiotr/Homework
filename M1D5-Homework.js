@@ -10,6 +10,11 @@ ASSIGNMENT RULES
 Write a function "area" which receives 2 parameters (l1,l2) and calculates the area of the associated rectangle.
 */
 
+    function area(l1,l2){
+        return l1 * l2
+    }
+    // Logging rectangle area
+    // console.log(area(5, 5))
 
 
 /* EXERCISE 2
