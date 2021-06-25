@@ -50,7 +50,7 @@ It should add the word "Strive" in front of the given string, but if the given s
 
     // Logging string "Piotr"
     // console.log(strivify("Piotr"))
-    
+
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
@@ -73,9 +73,17 @@ Write a function "reverseString" to programmatically reverse a given string (es.
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
+    function upperFirst(str){
+        const arr = str.split(" ")
+        for (let i = 0; i < arr.length; i++){
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        }
+        return arr.join(" ")
+    }
+    // Logging string with capitalized first letter
+    // console.log(upperFirst("just testing my string"))
 
-/* WRITE YOUR CODE HERE */
-
+    
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
