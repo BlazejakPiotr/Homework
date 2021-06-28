@@ -94,27 +94,72 @@
         for (let i = 0; i < arr.length; i++){
             arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1)
         }
-        return arr.join(' ')
-        
+        return arr.join(' ')       
     }
     
 
 /* Ex.4
-    Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
+    Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, 
+    otherwise it should remove the last one from it.
 */
+
+    function deleteOne(str, isTrue){
+        const arr = str.split('')
+        isTrue ? arr.shift() : arr.pop()
+        return arr.join('')
+    }
+
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
+    function onlyLetters(str){
+        return str.replace(/[0-9]/g, '');
+    }
+    
+
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
 
+    function isThisAnEmail(str){
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // pattern source: stackoverflow
+        return re.test(String(str).toLowerCase());
+    }
+
+
+    // Variables for Ex.7 & Ex.9 & Ex.10
+    let currentDate = new Date()
+    let currentDay = currentDate.getDate()
+    let currentMonth = currentDate.getMonth() + 1
+
+
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+
+    function whatDayIsIt(){
+        let currentDayOfTheWeek = currentDate.getDay()
+        switch (currentDayOfTheWeek){
+            case 1: 
+                return 'Monday'
+            case 2: 
+                return 'Tuesday'
+            case 3: 
+                return 'Wednesday'
+            case 4:
+                return 'Thursday'
+            case 5:
+                return 'Friday'
+            case 6:
+                return 'Saturday'
+            case 7:
+                return 'Sunday'
+        }    
+    }
+
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
@@ -135,6 +180,14 @@
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
 
+    function isTodayMyBirthday(currentDay, currentMonth){
+        const birthDate = 28
+        const birthMonth = 6
+        return birthDate === currentDay && birthMonth === currentMonth ?  'time to party' : 'not yet'
+    }
+    console.log(currentDay, currentMonth, isTodayMyBirthday())
+
+    
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
 
