@@ -172,18 +172,18 @@
     }
 */
 
-    function rollTheDices(num){
-        let arr = new Array(num)
-        for (let i = 0; i < num; i++){
+    function rollTheDices(num){      
+        let arr = new Array(num)            
+        for (let i = 0; i < num; i++){      
             arr[i] = dice()
-
         }
-        // LOGGING AN ARRAY
-        console.log(arr)
-        
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        let o = {                           
+            sum: arr.reduce(reducer),
+            values: [...arr],
+        }
+        return o
     }
-
-   console.log(rollTheDices(3))
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
