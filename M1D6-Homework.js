@@ -172,6 +172,19 @@
     }
 */
 
+    function rollTheDices(num){
+        let arr = new Array(num)
+        for (let i = 0; i < num; i++){
+            arr[i] = dice()
+
+        }
+        // LOGGING AN ARRAY
+        console.log(arr)
+        
+    }
+
+   console.log(rollTheDices(3))
+
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
@@ -183,9 +196,9 @@
     function isTodayMyBirthday(currentDay, currentMonth){
         const birthDate = 28
         const birthMonth = 6
-        return birthDate === currentDay && birthMonth === currentMonth ?  'time to party' : 'not yet'
+        return birthDate === currentDay && birthMonth === currentMonth ? 'time to party' : 'not yet'
     }
-    console.log(currentDay, currentMonth, isTodayMyBirthday())
+    // console.log(currentDay, currentMonth, isTodayMyBirthday())
 
     
 // JS Arrays // Objs
